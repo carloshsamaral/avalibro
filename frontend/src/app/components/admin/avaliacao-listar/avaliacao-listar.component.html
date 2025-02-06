@@ -1,0 +1,32 @@
+<h1>Avaliações de Livros</h1>
+<hr>
+<div class="container mt-4">
+  <table class="table table-striped table-bordered mt-3">
+    <thead class="table-dark">
+      <tr>
+        <th>Título do Livro</th>
+        <th>Nome do Aluno</th>
+        <th>Avaliação do Aluno</th>
+        <th>Nome do Professor</th>
+        <th>Retorno do Professor</th>
+        <th>Operações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let avaliacao of avaliacoes">
+        <td>{{ avaliacao.livroLocacao.livro.titulo }}</td>
+        <td>{{ avaliacao.livroLocacao.aluno.nome  }}</td>
+        <td>{{ avaliacao.avaliacaoAluno }}</td>
+        <td>{{ avaliacao.professor.nome }}</td>
+        <td>{{ avaliacao.retornoProfessor }}</td>
+        <td>
+            <a *ngIf="!avaliacao.avaliacaoAluno" 
+            [routerLink]="['/admin/avaliacao/avaliacao-aluno', avaliacao.id]"
+            class="btn btn-primary me-2">Avaliação aluno</a>
+            <a *ngIf="avaliacao.avaliacaoAluno && !avaliacao.retornoProfessor" 
+            [routerLink]="['/admin/avaliacao/avaliacao-professor', avaliacao.id]"
+            class="btn btn-danger">Avaliação professor</a>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Atualizar Livro</h2>
+    <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Campo Título -->
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input type="text" id="titulo" formControlName="titulo" class="form-control" placeholder="Digite o título do livro" />
+        <div *ngIf="usuarioForm.get('titulo')?.invalid && usuarioForm.get('titulo')?.touched" class="text-danger">
+          O título é obrigatório.
+        </div>
+      </div>
+  
+      <!-- Campo Autor -->
+      <div class="mb-3">
+        <label for="autor" class="form-label">Autor</label>
+        <input type="text" id="autor" formControlName="autor" class="form-control" placeholder="Digite o nome do autor" />
+        <div *ngIf="usuarioForm.get('autor')?.invalid && usuarioForm.get('autor')?.touched" class="text-danger">
+          O autor é obrigatório.
+        </div>
+      </div>
+  
+      <!-- Campo Gênero -->
+      <div class="mb-3">
+        <label for="genero" class="form-label">Gênero</label>
+        <input type="text" id="genero" formControlName="genero" class="form-control" placeholder="Digite o gênero do livro" />
+        <div *ngIf="usuarioForm.get('genero')?.invalid && usuarioForm.get('genero')?.touched" class="text-danger">
+          O gênero é obrigatório.
+        </div>
+      </div>
+  
+      <!-- Campo Ano de Publicação -->
+      <div class="mb-3">
+        <label for="anoPublicacao" class="form-label">Ano de Publicação</label>
+        <input type="number" id="anoPublicacao" formControlName="anoPublicacao" class="form-control" placeholder="Digite o ano de publicação" />
+        <div *ngIf="usuarioForm.get('anoPublicacao')?.invalid && usuarioForm.get('anoPublicacao')?.touched" class="text-danger">
+          O ano de publicação é obrigatório.
+        </div>
+      </div>
+  
+      <!-- Campo Disponível -->
+      <div class="mb-3">
+        <label for="disponivel" class="form-label">Disponível</label>
+        <select id="disponivel" formControlName="disponivel" class="form-select">
+          <option value="" disabled selected>Selecione</option>
+          <option [value]="true">Sim</option>
+          <option [value]="false">Não</option>
+        </select>
+        <div *ngIf="usuarioForm.get('disponivel')?.invalid && usuarioForm.get('disponivel')?.touched" class="text-danger">
+          Informe se o livro está disponível.
+        </div>
+      </div>
+  
+      <!-- Botão de Submissão -->
+      <button type="submit" class="btn btn-primary w-100" [disabled]="usuarioForm.invalid">Atualizar Livro</button>
+  
+    </form>
+  </div>

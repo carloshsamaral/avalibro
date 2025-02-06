@@ -1,0 +1,29 @@
+<h1>Lista de bibliotecários</h1>
+<hr>
+<div class="container mt-4">
+
+    <table class="table table-striped table-bordered mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <!-- <th>Tipo de Usuário</th> -->
+          <th>Registro de funcionario</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bibliotecario of bibliotecarios">
+          <td>{{ bibliotecario.nome }}</td>
+          <td>{{ bibliotecario.email }}</td>
+          <td>{{ bibliotecario.telefone }}</td>
+          <!-- <td>{{ bibliotecario.tipoUsuario }}</td> -->
+          <td>{{ bibliotecario.registroFuncionario }}</td>
+          <td>
+            <a [routerLink]="['/admin/bibliotecario/bibliotecario-atualizar', bibliotecario.id]" class="btn btn-warning">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

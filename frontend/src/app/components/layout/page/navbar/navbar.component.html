@@ -1,0 +1,140 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <!-- Logo ou Nome da Empresa -->
+      <a class="navbar-brand" href="#">LitQuest</a>
+  
+      <!-- Botão de menu hamburguer em dispositivos menores -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Links do Navbar -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+  
+          <!-- Menu Aluno -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="alunoDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Aluno
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="alunoDropdown">
+              <li><a class="dropdown-item" routerLink="admin/aluno/aluno-cadastrar">Cadastrar</a></li>
+              <li><a class="dropdown-item" routerLink="admin/aluno/aluno-listar">Listar</a></li>
+              <!-- <li><a class="dropdown-item" routerLink="admin/aluno/aluno-detalhes">Detalhes</a></li> -->
+            </ul>
+          </li>
+  
+          <!-- Menu Professor -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="professorDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Professor
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="professorDropdown">
+              <li><a class="dropdown-item" routerLink="admin/professor/professor-cadastrar">Cadastrar</a></li>
+              <li><a class="dropdown-item" routerLink="admin/professor/professor-listar">Listar</a></li>
+              <!-- <li><a class="dropdown-item" routerLink="admin/professor/professor-detalhes">Detalhes</a></li> -->
+            </ul>
+          </li>
+
+                    <!-- Menu lIVRO -->
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        id="livroDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Livro
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="livroDropdown">
+                        <li><a class="dropdown-item" routerLink="admin/livro/livro-cadastrar">Cadastrar</a></li>
+                        <li><a class="dropdown-item" routerLink="admin/livro/livro-listar">Listar</a></li>
+                        <!-- <li><a class="dropdown-item" routerLink="admin/livro/livro-detalhes">Detalhes</a></li> -->
+                      </ul>
+                    </li>
+  
+          <!-- Menu Bibliotecário -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="bibliotecarioDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Bibliotecário
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="bibliotecarioDropdown">
+              <li><a class="dropdown-item" routerLink="admin/bibliotecario/bibliotecario-cadastrar">Cadastrar</a></li>
+              <li><a class="dropdown-item" routerLink="admin/bibliotecario/bibliotecario-listar">Listar</a></li>
+              <!-- <li><a class="dropdown-item" routerLink="admin/bibliotecario/bibliotecario-detalhes">Detalhes</a></li> -->
+            </ul>
+          </li>
+
+<!-- Menu Locacao -->
+<li class="nav-item dropdown">
+  <a
+    class="nav-link dropdown-toggle"
+    href="#"
+    id="locacaoDropdown"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Locação
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="locacaoDropdown">
+    <li><a class="dropdown-item" routerLink="admin/locacao/locacao-cadastrar">Criar Locação</a></li>
+    <li><a class="dropdown-item" routerLink="admin/locacao/locacao-listar">Listar Locação</a></li>
+  </ul>
+</li>
+  
+          <!-- Menu Avaliação -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="avaliacaoDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Avaliação
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="avaliacaoDropdown">
+              <li><a class="dropdown-item" routerLink="admin/avaliacao/avaliacao-cadastrar">Criar Avaliação</a></li>
+              <li><a class="dropdown-item" routerLink="admin/avaliacao/avaliacao-listar">Listar Avaliações</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

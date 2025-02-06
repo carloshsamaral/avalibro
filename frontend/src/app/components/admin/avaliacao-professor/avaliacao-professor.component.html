@@ -1,0 +1,18 @@
+<h1>Avaliação de Livro</h1>
+<hr>
+<div class="container mt-4">
+  <form [formGroup]="avaliacaoForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="avaliacaoAluno">Avaliação do Aluno</label>
+        <input type="text" id="avaliacaoAluno" class="form-control" formControlName="avaliacaoAluno" readonly />
+      </div>
+
+    <div class="form-group">
+      <label for="avaliacaoProfessor">Avaliação do Professor</label>
+      <textarea id="avaliacaoProfessor" class="form-control" formControlName="avaliacaoProfessor" rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="avaliacaoForm.invalid">Enviar</button>
+  </form>
+</div>

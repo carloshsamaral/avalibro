@@ -1,0 +1,41 @@
+<h1>Cadastrar locação de livro</h1>
+<hr>
+
+<div class="container mt-4">
+    <form [formGroup]="meuFormulario" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="idAluno">Selecione um aluno:</label>
+        <select id="idAluno" class="form-control" formControlName="idAluno">
+          <option value="" disabled selected>Selecione...</option>
+          <option *ngFor="let item of itensDropdown" [value]="item.id">
+            {{ item.nome }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="idLivro">Selecione um livro:</label>
+        <select id="idLivro" class="form-control" formControlName="idLivro">
+          <option value="" disabled selected>Selecione...</option>
+          <option *ngFor="let itemLivro of itensDropdownLivro" [value]="itemLivro.id">
+            {{ itemLivro.titulo }}
+          </option>
+        </select>
+      </div>
+
+      <label for="dataDevolucaoPrevista">Data de Devolução Prevista:</label>
+      <input
+        type="date"
+        id="dataDevolucaoPrevista"
+        class="form-control"
+        formControlName="dataDevolucaoPrevista"
+        readonly
+      />
+  
+      <button type="submit" class="btn btn-primary mt-3" 
+      [disabled]="meuFormulario.invalid"
+      >
+        Enviar
+      </button>
+    </form>
+  </div>

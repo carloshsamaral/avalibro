@@ -1,0 +1,34 @@
+<h1>Lista de livros</h1>
+<hr>
+<div class="container mt-4">
+
+    <table class="table table-striped table-bordered mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th>Título</th>
+          <th>Autor</th>
+          <th>Ano publicação</th>
+          <th>Disponível</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livro of livros">
+          <td>{{ livro.titulo }}</td>
+          <td>{{ livro.autor }}</td>
+          <td>{{ livro.anoPublicacao }}</td>
+          <td>{{ livro.disponivel ? 'Disponível' : 'Locado' }}</td>
+          <td>
+            <a
+            class="btn btn-warning"
+            [routerLink]="['/admin/livro/livro-atualizar', livro.id]"
+          >
+            Editar
+          </a>
+            <!-- Espaço e cor alterados no botão de Locar -->
+            <!-- <button class="btn btn-warning ms-2" (click)="alterarLivro(livro)">Locar</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

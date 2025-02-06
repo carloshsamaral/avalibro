@@ -1,0 +1,34 @@
+<h1>Lista de professores</h1>
+<hr>
+<div class="container mt-4">
+
+    <table class="table table-striped table-bordered mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefone</th>
+          <!-- <th>Tipo de Usuário</th> -->
+          <th>Disciplina</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let professor of professores">
+          <td>{{ professor.nome }}</td>
+          <td>{{ professor.email }}</td>
+          <td>{{ professor.telefone }}</td>
+          <!-- <td>{{ professor.tipoUsuario }}</td> -->
+          <td>{{ professor.disciplina }}</td>
+          <td>
+            <a
+            class="btn btn-warning"
+            [routerLink]="['/admin/professor/professor-atualizar', professor.id]"
+          >
+            Editar
+          </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
